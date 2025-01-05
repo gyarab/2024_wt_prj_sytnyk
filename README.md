@@ -15,3 +15,4 @@ Stránka s kontaktními informacemi obsahuje adresu, telefonní číslo a e-mail
 
 Webová aplikace je optimalizovaná i pro použití na mobilních zařízeních, což cestujícím umožňuje její využití přímo během cesty.
 ## Wireframes 
+![Turisticky_pruvodce_wireframes](./Turisticky_pruvodce_wireframes.jpg)
