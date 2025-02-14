@@ -18,4 +18,4 @@ Webová aplikace je optimalizovaná i pro použití na mobilních zařízeních,
 ![Turisticky_pruvodce_wireframes](./Turisticky_pruvodce_wireframes.jpg)
 
 ## Schéma databáze
-![DB_schema](./DB_schema.HEIC)
+![DB_schema](./DB_schema.JPG)
