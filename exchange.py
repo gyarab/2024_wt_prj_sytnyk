@@ -4,7 +4,7 @@ print("Online prevodnik men dle cnb")
 
 url = 'https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt;jsessionid=5EBE7E79ED83B35877829238E5BBB94D?date=13.02.2025'
 
-r = httpx.get('url')
+r = httpx.get(url)
 
 #print(r.text)
 
