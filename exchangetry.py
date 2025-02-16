@@ -1,6 +1,6 @@
 import httpx
 
-print('ahoj')
+print('Ahoj')
 url = "https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt?date=13.02.2025"
 r = httpx.get(url)
 
