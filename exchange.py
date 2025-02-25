@@ -1,7 +1,12 @@
 import httpx
 from datetime import date
+import colorama
+from colorama import Fore, Back, Style
+from colorama import init
 
-print("Online prevodnik men dle cnb")
+init()
+
+print(Style.BRIGHT + Back.CYAN + Fore.BLUE + "Online prevodnik men dle cnb" + Style.RESET_ALL)
 
 today = date.today().strftime("%d.%m.%Y")
 
@@ -18,7 +23,7 @@ def hledani_kurzu(mena):
     if row: 
         return row
     else: 
-        print("Chyba při hledání měny")
+        print(Style.BRIGHT + Fore.RED + "Chyba při hledání měny" + Style.RESET_ALL)
         return None
 
 def ziskej_kurz(line):
@@ -53,8 +58,8 @@ line_usd = hledani_kurzu("USD")
 kurz_eur = ziskej_kurz(line_eur)
 kurz_usd = ziskej_kurz(line_usd)
 
-print(f"EUR {kurz_eur}")
-print(f"USD {kurz_usd}")
+print(Back.GREEN + Style.BRIGHT + f"EUR {kurz_eur}" + Style.RESET_ALL)
+print(Back.GREEN + Style.BRIGHT + f"USD {kurz_usd}" + Style.RESET_ALL)
 
 prevody = [
     "z CZK do EUR",
@@ -64,96 +69,96 @@ prevody = [
     "z USD do EUR",
     "z EUR do USD",
 ]
-print("Dostupne prevody:")
+print(Style.BRIGHT + Fore.BLUE + "Dostupne prevody:" + Style.RESET_ALL)
 for i, prevod in enumerate(prevody, start=1):
-    print(f"{i}. {prevod}")
+    print(Fore.MAGENTA + f"{i}. {prevod}" + Style.RESET_ALL)
 
 
-exchange_type = input("Zadej cislo prevodu: ")
+exchange_type = input(Fore.YELLOW + "Zadej cislo prevodu: " + Style.RESET_ALL)
 
 if not exchange_type.isdigit():
-    print("Chybne zadane cislo prevodu")
-    exchange_type = input("Zadej cislo prevodu: ")
+    print(Style.BRIGHT + Fore.RED + "Chybne zadane cislo prevodu" + Style.RESET_ALL)
+    exchange_type = input(Fore.YELLOW + "Zadej cislo prevodu: " + Style.RESET_ALL)
 
 exchange_type = int(exchange_type)
 
 if exchange_type < 1 or exchange_type > 6:
-    print("Chybne zadane cislo prevodu")
-    exchange_type = input("Zadej cislo prevodu od 1 do 6: ")
+    print(Style.BRIGHT + Fore.RED + "Chybne zadane cislo prevodu" + Style.RESET_ALL)
+    exchange_type = input(Fore.MAGENTA + "Zadej cislo prevodu od 1 do 6: " + Style.RESET_ALL)
 
 result = None
 
 if exchange_type == 1:
-    vstup = input("Zadej castku v CZK: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v CZK: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v CZK: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v CZK: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_czk_do_eur(castka, kurz_eur)
     else:
         castka = int(vstup)
         result = z_czk_do_eur(castka, kurz_eur)
 elif exchange_type == 2:
-    vstup = input("Zadej castku v EUR: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v EUR: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v EUR: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v EUR: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_eur_do_czk(castka, kurz_eur)
     else:
         castka = int(vstup)
         result = z_eur_do_czk(castka, kurz_eur)
 elif exchange_type == 3:
-    vstup = input("Zadej castku v CZK: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v CZK: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v CZK: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v CZK: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_czk_do_usd(castka, kurz_usd)
     else:
         castka = int(vstup)
         result = z_czk_do_usd(castka, kurz_usd)
 elif exchange_type == 4:
-    vstup = input("Zadej castku v USD: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v USD: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v USD: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v USD: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_usd_do_czk(castka, kurz_usd)
     else:
         castka = int(vstup)
         result = z_usd_do_czk(castka, kurz_usd)
 elif exchange_type == 5:
-    vstup = input("Zadej castku v USD: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v USD: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v USD: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v USD: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_usd_do_eur(castka, kurz_eur, kurz_usd)
     else:
         castka = int(vstup)
         result = z_usd_do_eur(castka, kurz_eur, kurz_usd)
 elif exchange_type == 6:
-    vstup = input("Zadej castku v EUR: ")
+    vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v EUR: " + Style.RESET_ALL)
     castka = vstup
 
     if not vstup.isdigit():
-        print("Chybne zadana castka")
-        vstup = input("Zadej castku v EUR: ")
+        print(Style.BRIGHT + Fore.RED + "Chybne zadana castka" + Style.RESET_ALL)
+        vstup = input(Style.BRIGHT + Fore.CYAN + "Zadej castku v EUR: " + Style.RESET_ALL)
         castka = int(vstup)
         result = z_eur_do_usd(castka, kurz_usd, kurz_eur)
     else:
         castka = int(vstup)
         result = z_eur_do_usd(castka, kurz_usd, kurz_eur)
 
-print(f"Vysledek je {result:.3f}")
+print(Fore.CYAN + f"Vysledek je {result:.3f}" + Style.RESET_ALL)
