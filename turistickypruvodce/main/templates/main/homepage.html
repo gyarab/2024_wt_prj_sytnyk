@@ -16,14 +16,26 @@
                 Turistický průvodce
               </a>
 
+              <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid me-2">
+                  <form class="d-flex me-3">
+                    <input class="form-control me-2 pe-1" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+                </div>
             
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a href="{% url 'one' %}">One</a>
-                    <a href="{% url 'two' %}">Two</a>
+                    <a href="{% url 'homepage' %}">Homepage</a>
+                    <a href="{% url 'one' %}">Pamatky</a>
+                    <a href="{% url 'two' %}">Kontaktni informace</a>
+                    <span class="d-block text-start ps-0 mt-1">Filtry</span>
                 </div>
             </div>
 

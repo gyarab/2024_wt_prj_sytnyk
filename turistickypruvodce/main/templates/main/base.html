@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <p>
-            MENU
-            <a href="/">HOME</a>
-            <a href="./one">ONE</a>
-            <a href="./two">TWO</a>
+            Menu
+            <a href="{% url 'homepage' %}">Homepage</a>
+            <a href="{% url 'one' %}">Pamatky</a>
+            <a href="{% url 'two' %}">Kontaktni informace</a>
         </p>
         {% block content %}
             Tady bude obsah
