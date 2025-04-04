@@ -15,4 +15,4 @@ class CategorieAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Sight, SightAdmin)
 admin.site.register(State, StateAdmin)
-admin.site.register(Categorie, CategoryAdmin)
+admin.site.register(Categorie, CategorieAdmin)
