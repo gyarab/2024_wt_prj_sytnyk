@@ -13,5 +13,11 @@ class Sight(models.Model):
 class State(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"State <{self.id}> {self.name}"
+
 class Categorie(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Categorie <{self.id}> {self.name}"
