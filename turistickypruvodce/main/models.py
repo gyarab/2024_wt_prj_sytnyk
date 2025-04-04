@@ -13,5 +13,5 @@ class Sight(models.Model):
 class State(models.Model):
     name = models.CharField(max_length=100)
 
-class Category(models.Model):
+class Categorie(models.Model):
     name = models.CharField(max_length=50)
