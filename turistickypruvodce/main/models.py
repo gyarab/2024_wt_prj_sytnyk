@@ -8,7 +8,7 @@ class Sight(models.Model):
     #director = models.ForeignKey("Director", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return f"Movie <{self.id}> {self.name} ({self.location})"
+        return f"Sight <{self.id}> {self.name} ({self.location})"
 
 class State(models.Model):
     name = models.CharField(max_length=100)
