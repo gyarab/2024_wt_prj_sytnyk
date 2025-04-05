@@ -25,3 +25,6 @@ class Categorie(models.Model):
 class SightCategorie(models.Model):
     sight = models.ForeignKey("Sight", on_delete=models.SET_NULL, null=True)
     categorie = models.ForeignKey("Categorie", on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return f"{self.categorie.name} ({self.sight.name})"
