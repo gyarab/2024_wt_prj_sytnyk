@@ -1,0 +1,26 @@
+- model: main.sight
+  pk: 1
+  fields:
+    name: K2
+    location: Pakistan
+    description: K2, známá také jako Mount Godwin-Austen, je druhá nejvyšší hora na
+      svìtì, s nadmoøskou výškou 8 611 metrù. Nachází se na hranici mezi Pákistánem
+      a Èínou v pohoøí Karakoram.
+    link: ''
+- model: main.sight
+  pk: 2
+  fields:
+    name: Egyptské pyramidy Chufuova a Rachefova pyramidy
+    location: Egypt
+    description: Egyptské pyramidy jsou jedním z nejznámìjších a nejzáhadnìjších archeologických
+      nálezù na svìtì. Nejvìtší a nejznámìjší z nich je Velká pyramida v Gíze.
+    link: ''
+- model: main.sight
+  pk: 3
+  fields:
+    name: Hora Fudži
+    location: Japan
+    description: Fudži (Fujisan) je nejvyšší hora Japonska s nadmoøskou výškou 3 776
+      metrù. Fudži je známá svou symetrickou kuželovitou siluetou, která je považována
+      za jednu z nejkrásnìjších na svìtì.
+    link: ''

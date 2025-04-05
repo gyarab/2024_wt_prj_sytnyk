@@ -1,0 +1,12 @@
+- model: main.state
+  pk: 1
+  fields:
+    name: Pakistan
+- model: main.state
+  pk: 2
+  fields:
+    name: Egypt
+- model: main.state
+  pk: 3
+  fields:
+    name: Japan
