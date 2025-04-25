@@ -5,7 +5,7 @@ class Sight(models.Model):
     location = models.CharField(max_length=300)
     description = models.TextField(blank=True, default="")
     link = models.CharField(max_length=300, blank=True, default="")
-    #director = models.ForeignKey("Director", on_delete=models.SET_NULL, null=True)
+    state = models.ForeignKey("State", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return f"Sight <{self.id}> {self.name} ({self.location})"
@@ -21,3 +21,10 @@ class Categorie(models.Model):
 
     def __str__(self):
         return f"Categorie <{self.id}> {self.name}"
+
+class SightCategorie(models.Model):
+    sight = models.ForeignKey("Sight", on_delete=models.SET_NULL, null=True)
+    categorie = models.ForeignKey("Categorie", on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return f"{self.categorie.name} ({self.sight.name})"

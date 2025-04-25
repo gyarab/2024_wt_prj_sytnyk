@@ -1,0 +1,8 @@
+- model: main.categorie
+  pk: 1
+  fields:
+    name: Hory
+- model: main.categorie
+  pk: 2
+  fields:
+    name: Historická památka
