@@ -3,24 +3,34 @@
   fields:
     name: K2
     location: Pakistan
-    description: K2, známá také jako Mount Godwin-Austen, je druhá nejvyšší hora na
-      svìtì, s nadmoøskou vıškou 8 611 metrù. Nachází se na hranici mezi Pákistánem
-      a Èínou v pohoøí Karakoram.
+    description: K2, znÃ¡mÃ¡ takÃ© jako Mount Godwin-Austen, je druhÃ¡ nejvyÅ¡Å¡Ã­ hora na
+      svÄ›tÄ›, s nadmoÅ™skou vÃ½Å¡kou 8 611 metrÅ¯. NachÃ¡zÃ­ se na hranici mezi PÃ¡kistÃ¡nem
+      a ÄŒÃ­nou v pohoÅ™Ã­ Karakoram.
     link: ''
 - model: main.sight
   pk: 2
   fields:
-    name: Egyptské pyramidy Chufuova a Rachefova pyramidy
+    name: EgyptskÃ© pyramidy Chufuova a Rachefova pyramidy
     location: Egypt
-    description: Egyptské pyramidy jsou jedním z nejznámìjších a nejzáhadnìjších archeologickıch
-      nálezù na svìtì. Nejvìtší a nejznámìjší z nich je Velká pyramida v Gíze.
+    description: EgyptskÃ© pyramidy jsou jednÃ­m z nejznÃ¡mÄ›jÅ¡Ã­ch a nejzÃ¡hadnÄ›jÅ¡Ã­ch archeologickÃ½ch
+      nÃ¡lezÅ¯ na svÄ›tÄ›. NejvÄ›tÅ¡Ã­ a nejznÃ¡mÄ›jÅ¡Ã­ z nich je VelkÃ¡ pyramida v GÃ­ze.
     link: ''
 - model: main.sight
   pk: 3
   fields:
-    name: Hora Fudi
+    name: Hora FudÅ¾i
     location: Japan
-    description: Fudi (Fujisan) je nejvyšší hora Japonska s nadmoøskou vıškou 3 776
-      metrù. Fudi je známá svou symetrickou kuelovitou siluetou, která je povaována
-      za jednu z nejkrásnìjších na svìtì.
+    description: FudÅ¾i (Fujisan) je nejvyÅ¡Å¡Ã­ hora Japonska s nadmoÅ™skou vÃ½Å¡kou 3 776
+      metrÅ¯. FudÅ¾i je znÃ¡mÃ¡ svou symetrickou kuÅ¾elovitou siluetou, kterÃ¡ je povaÅ¾ovÃ¡na
+      za jednu z nejkrÃ¡snÄ›jÅ¡Ã­ch na svÄ›tÄ›.
+    link: ''
+
+- model: main.sight
+  pk: 4
+  fields:
+    name: Eiffelova vÄ›Å¾
+    location: Francie
+    description: Eiffelova vÄ›Å¾ je ikonickÃ¡ Å¾eleznÃ¡ konstrukce v PaÅ™Ã­Å¾i, kterÃ¡ byla
+      postavena v roce 1889 jako vstupnÃ­ brÃ¡na na SvÄ›tovou vÃ½stavu. Je jednÃ­m z nejznÃ¡mÄ›jÅ¡Ã­ch
+      symbolÅ¯ mÄ›sta a Francie.
     link: ''

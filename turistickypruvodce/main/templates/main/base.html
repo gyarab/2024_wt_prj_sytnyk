@@ -15,6 +15,16 @@
             <a href="{% url 'one' %}">Pamatky</a>
             <a href="{% url 'two' %}">Kontaktni informace</a>
         </p>
+
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand">Navbar</a>
+              <form class="form-imline" method="GET" action="/">
+                <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
         {% block content %}
             Tady bude obsah
         {% endblock %}
