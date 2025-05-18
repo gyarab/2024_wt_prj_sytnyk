@@ -34,5 +34,18 @@
             {% endfor %}
         </ul>
     </div>
+
+    <div class="row row-cols-1  row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2">
+        {% for sight in sights %}
+        <div class="col">
+            <div class="card h-100" style="cursor: pointer;" >
+                <img class="card-img-top" src="{% if sight.main_picture %}{{sight.main_picture}}{% else %}//place-hold.it/200x250/{% endif %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{sight.name}} ({{ sight.location}}), {{sight.state}}</h5>
+                    {% if movie.director %}<h6>{{ movie.director}}</h6>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
   
       {% endblock %}
