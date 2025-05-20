@@ -4,11 +4,15 @@ class Sight(models.Model):
     name = models.CharField(max_length=300)
     location = models.CharField(max_length=300)
     description = models.TextField(blank=True, default="")
+    main_picture = models.CharField(blank=True, default="", max_length=2000)
     link = models.CharField(max_length=300, blank=True, default="")
     state = models.ForeignKey("State", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return f"Sight <{self.id}> {self.name} ({self.location})"
+    
+    def categories_display(self):
+        return ", ".join([i.name for i in self.categories.all()])
 
 class State(models.Model):
     name = models.CharField(max_length=100)

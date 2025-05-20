@@ -16,7 +16,6 @@ class CategorieAdmin(admin.ModelAdmin):
 class SightCategorieAdmin(admin.ModelAdmin):
     list_display = ["sight", "categorie"]
 
-# Register your models here.
 admin.site.register(Sight, SightAdmin)
 admin.site.register(State, StateAdmin)
 admin.site.register(Categorie, CategorieAdmin)
