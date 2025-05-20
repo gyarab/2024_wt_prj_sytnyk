@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from main.models import Sight, Categorie
-from faker import Faker
+try:
+    from faker import Faker
+except ModuleNotFoundError:
+    Faker = None
 
 def get_homepage(request):
     # SELECT *from.Sights LIMIT 10
