@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from faker import Faker
 from main.models import Sight, Categorie
+from faker import Faker
 
 def get_homepage(request):
     # SELECT *from.Sights LIMIT 10
