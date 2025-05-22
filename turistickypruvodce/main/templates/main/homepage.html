@@ -47,9 +47,6 @@
                     {% endfor %}
                     <p class="card-text ">{{ sight.description|truncatewords_html:30 }}</p>
                 </div>
-                <div class="card-footer text-end">
-                    <a href="{% url 'sight' sight.id %}" class="btn btn-outline-primary">Detaily</a>
-            </div>
         </div>
         {% empty %}
         <p>
