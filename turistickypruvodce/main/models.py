@@ -4,7 +4,6 @@ class Sight(models.Model):
     name = models.CharField(max_length=300)
     location = models.CharField(max_length=300)
     description = models.TextField(blank=True, default="")
-    main_picture = models.CharField(blank=True, default="", max_length=2000)
     link = models.CharField(max_length=300, blank=True, default="")
     state = models.ForeignKey("State", on_delete=models.SET_NULL, null=True)
 

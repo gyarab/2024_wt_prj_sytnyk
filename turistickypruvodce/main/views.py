@@ -1,9 +1,5 @@
 from django.shortcuts import render
 from main.models import Sight, Categorie
-try:
-    from faker import Faker
-except ModuleNotFoundError:
-    Faker = None
 
 def get_homepage(request):
     # SELECT *from.Sights LIMIT 10
@@ -26,26 +22,4 @@ def get_homepage(request):
 
     return render(
         request, "main/homepage.html", context
-    )
-
-def get_sight(request, id):
-    print(id)
-    # SELECT * from Sights WHERE id = id;
-    sight = Sight.objects.get(id=id)
-    context = {
-        "sight": sight
-    }
-    return render(
-        request, "main/sight.html", context
-    )
-
-def random_person(request):
-    context = {
-        # use faker to generate random data
-        "name": Faker().name(),
-        "email": Faker().email(),
-        "phone": Faker().phone_number(),
-   }
-    return render(
-        request, "main/random.html", context
     )

@@ -2,4 +2,3 @@ django>=5
 httpx 
 colorama
 pyyaml
-faker

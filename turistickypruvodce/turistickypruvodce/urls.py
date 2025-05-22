@@ -22,8 +22,6 @@ from main.views import get_homepage, get_sight, random_person
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_homepage, name='homepage'),
-    path("sight/<int:id>", get_sight, name="sight"),
     path('one/', TemplateView.as_view(template_name='main/one.html'), name='one'),
     path('two/', TemplateView.as_view(template_name='main/two.html'), name='two'),
-    path('random', random_person, name="random"),
 ]
